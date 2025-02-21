@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import "./Navbar.css";
 import "remixicon/fonts/remixicon.css";
+// import logo from '../../assets/2.svg';
+import img from '../Assets/2-removebg-preview.png'
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -49,7 +51,8 @@ const Navbar = () => {
   return (
     <div className="main">
       <div className="nav">
-        <h2>LOGO</h2>
+      <img src={img} alt="Logo" className="logo" />
+
         <i className="ri-menu-3-line mobile-menu" onClick={() => setIsMenuOpen(true)}></i>
 
         {/* Desktop Navigation */}

@@ -8,13 +8,22 @@ body{
     position: relative;
     width: 100%;
   }
+  .logo {
+  margin-top: 10px;
+    height: 120px; /* Adjust as needed */
+    width: auto; /* Keeps the aspect ratio */
+    object-fit: contain; /* Ensures the image scales properly */
+
+  }
+  
   
   .nav {
-   background-color: grey;
+  height: 90px;
+   background-color: #242452;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding:  20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,13 +49,12 @@ body{
   }
   
   .nav-links a{
+  color: white;
   padding: 3px;
   border-radius: 4px;
   }
   
-  .nav-links a:hover{
-  background-color: rgb(200, 196, 196);
-  }
+ 
   
   
   
@@ -97,6 +105,7 @@ body{
   
     .mobile-menu {
       display: block; /* Show menu icon on tablets & smaller */
+      color: white;
     }
   
     .full {

@@ -1,5 +1,5 @@
 .about{
-    background-color: rgb(150, 206, 240);
+    background-color: white;
 }
 
 
@@ -22,25 +22,16 @@
 .title h1 {
     font-size: 32px;
     font-weight: bold;
-    color: #111827;
+    color: #191b3d;
     margin-bottom: 10px;
-    animation: glow 1.5s infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-    }
-    to {
-        text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
-    }
+    text-shadow: 0 0 10px #191b3d;
 }
 
 .title p {
     max-width: 800px;
     margin: 0 auto;
-    font-size: 16px;
-    color: #4b5563;
+    font-size: 18px;
+    color: #121d2c;
     line-height: 1.6;
     padding: 0 10px;
 }
@@ -59,9 +50,8 @@
     max-width: 400px;
     max-height: 160px;
     padding: 20px;
-    background: #f9fafb;
     border-radius: 12px;
-    border: 2px solid #3b82f6;
+    border: 2px solid #ffbb03;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
     flex: 1 1 300px;
@@ -90,10 +80,11 @@
     font-weight: bold;
     color: #111827;
     margin-bottom: 10px;
+    text-shadow: 0 0 10px #191b3d;
 }
 
 .meet-expert p {
-    font-size: 16px;
+    font-size: 18px;
     color: #4b5563;
     max-width: 800px;
     margin: 0 auto;
@@ -165,6 +156,7 @@
     text-align: center;
     margin-top: 50px;
     padding: 20px;
+    text-shadow: 0 0 10px #191b3d;
 }
 
 .certifications h2 {
