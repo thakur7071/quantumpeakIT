@@ -1,5 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
-import "./hero.css";
+import "./Hero.css";
 
 const Hero = () => {
   return (
