@@ -1,4 +1,4 @@
-import "./contact.css";
+import "./Contact.css";
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Clock } from "lucide-react";
 
 const Contact = () => {
