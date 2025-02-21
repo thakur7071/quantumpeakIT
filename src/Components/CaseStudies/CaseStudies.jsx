@@ -70,7 +70,7 @@ const CaseStudies = () => {
             <p><strong>The Solution:</strong> {study.solution}</p>
             <p><strong>Results:</strong> {study.results}</p>
             <blockquote className="case-study-testimonial">
-              "{study.testimonial}"
+              {study.testimonial}
             </blockquote>
             <button className="case-study-button">
               Request a Consultation
