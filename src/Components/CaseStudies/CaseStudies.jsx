@@ -1,5 +1,5 @@
-import React from "react";
-import "./casestudies.css";
+
+import "./CaseStudies.css";
 
 const caseStudies = [
   {

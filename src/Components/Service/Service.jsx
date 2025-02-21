@@ -1,5 +1,5 @@
 import { Briefcase, Cloud, Shield } from "lucide-react"; // Import icons
-import "./service.css";
+import "./Service.css";
 
 const services = [
   {
