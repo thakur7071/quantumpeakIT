@@ -16,7 +16,7 @@ const caseStudies = [
       "Thanks to our collaboration with [Your Company Name], we’ve seen tremendous growth .",
   },
   {
-    title: "Enhancing Cybersecurity ",
+    title: "Cybersecurity ",
     client: "ABC Ltd",
     overview: "ABC Ltd is a leading e-commerce company facing security threats.",
     challenge:
