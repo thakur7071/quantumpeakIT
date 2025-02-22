@@ -26,6 +26,14 @@ const blogPosts = [
     excerpt: "We're excited to announce our new collaboration with TechCorp!",
     link: "https://techcorp.com/news/latest-partnership",
   },
+  {
+    id: 4,
+    title: "Our Latest Partnership with TechCorp",
+    category: "Company News",
+    image: "https://picsum.photos/600/300?random=3",
+    excerpt: "We're excited to announce our new collaboration with TechCorp!",
+    link: "https://techcorp.com/news/latest-partnership",
+  },
 ];
 
 const Blog = () => {
