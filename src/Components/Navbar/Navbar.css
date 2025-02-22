@@ -48,6 +48,10 @@ body{
     text-decoration: none;
     font-size: 18px;
   }
+
+  .nav-links a:hover{
+    color: #ffbb03;
+  }
   
   .nav-links a{
   color: white;
@@ -86,6 +90,10 @@ body{
     font-size: 22px;
   }
   
+.full h4 a:hover{
+  color: #ffbb03;
+}
+
   .full i {
     font-size: 30px;
     position: absolute;
