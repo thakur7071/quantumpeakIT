@@ -30,9 +30,9 @@ const Contact = () => {
         {/* Get in Touch Card */}
         <div className="contact-card">
           <h2>Get in Touch</h2>
-          <p><Phone size={18} /> Call us at (123) 456-7890</p>
-          <p><Mail size={18} /> Email us at contact@yourcompany.com</p>
-          <p><MapPin size={18} /> 1234 Business St, City, Country</p>
+          <p><Phone size={18} />(123) 456-7890</p>
+          <p><Mail size={18} />contact@yourcompany.com</p>
+          <p><MapPin size={18} />1234 Business St, City, Country</p>
         </div>
 
         {/* Business Hours Card */}
@@ -45,7 +45,7 @@ const Contact = () => {
       </div>
 
       {/* Google Map */}
-      <h3>Visit Our Office</h3>
+      <h3 className="map-title">Visit Our Office</h3>
       <iframe
         title="Google Map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509367!2d144.9559283153167!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c3625c9e0b8a!2sSome%20Business!5e0!3m2!1sen!2sus!4v1633072741372!5m2!1sen!2sus"

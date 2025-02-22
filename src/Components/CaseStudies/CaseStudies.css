@@ -4,7 +4,6 @@
     text-align: center;
     max-width: 1600px;
     margin: 80px auto;
-
 }
 
 .case-studies-title {
@@ -13,7 +12,6 @@
     margin-bottom: 20px;
     color: #191b3d;
     font-family: "Josefin Sans", sans-serif;
-  
 }
 
 /* Case Study Grid */
@@ -36,58 +34,46 @@
     border-radius: 12px;
     border: 2px solid #191b03;
     position: relative; /* Needed for absolute positioning of pseudo-elements */
-    overflow: hidden; /* Ensures the semi-circles stay inside the card */
-}
-
-/* Top-Right Semi-Circle */
-.case-study-card {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding: 50px;
-    border-radius: 12px;
-    border: 2px solid #191b03;
-    position: relative; /* Needed for absolute positioning of pseudo-elements */
-    overflow: hidden; /* Ensures the semi-circles stay inside the card */
+    overflow: hidden; /* Ensures elements stay inside the card */
 }
 
 /* Top-Right Large Semi-Circle */
 .case-study-card::before {
     content: "";
     position: absolute;
-    top: -40px;  /* Moves it slightly outside so it blends in */
+    top: -40px;
     right: -40px;
-    width: 120px; /* Increased size */
-    height: 120px; /* Should be same as width for a perfect semi-circle */
-    background-color: #ffbb03; /* Semi-circle color */
+    width: 120px;
+    height: 120px;
+    background-color: #ffbb03;
     border-radius: 0 0 0 120px; /* Creates the top-right semi-circle */
+    z-index: 1;
 }
 
 /* Bottom-Left Large Semi-Circle */
 .case-study-card::after {
     content: "";
     position: absolute;
-    bottom: -40px;  /* Moves it slightly outside */
+    bottom: -40px;
     left: -40px;
-    width: 120px; /* Increased size */
-    height: 120px; /* Should be same as width for a perfect semi-circle */
-    background-color: #ffbb03; /* Semi-circle color */
+    width: 120px;
+    height: 120px;
+    background-color: #ffbb03;
     border-radius: 0 120px 0 0; /* Creates the bottom-left semi-circle */
+    z-index: 1;
 }
 
 
-.case-study-card strong{
+
+
+
+.case-study-card strong {
     color: #ffbb03;
 }
 
-.case-study-card p{
+.case-study-card p {
     color: #191b3d;
 }
-
-
 
 .case-study-title {
     font-size: 1.5rem;
@@ -117,18 +103,14 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 1320px) {
     .case-studies-grid {
         grid-template-columns: repeat(2, minmax(320px, 1fr)); /* 2 cards per row */
     }
-
     .case-studies-container {
         padding: 30px;
     }
-
     .case-study-card {
         padding: 20px;
     }
@@ -138,11 +120,9 @@
     .case-studies-grid {
         grid-template-columns: 1fr; /* 1 card per row */
     }
-
     .case-studies-title {
         font-size: 2rem;
     }
-
     .case-studies-container {
         padding: 20px;
     }
@@ -152,7 +132,6 @@
     .case-studies-title {
         font-size: 1.8rem;
     }
-
     .case-study-card {
         padding: 15px;
     }
@@ -163,24 +142,19 @@
     .case-studies-container {
         padding: 10px;
     }
-
     .case-studies-grid {
         grid-template-columns: 1fr;
     }
-
     .case-study-card {
         width: 100%;
         padding: 10px;
     }
-
     .case-study-title {
         font-size: 1.2rem;
     }
-
     .case-study-testimonial {
         font-size: 0.85rem;
     }
-
     .case-study-button {
         font-size: 0.85rem;
         padding: 8px 12px;
@@ -191,28 +165,21 @@
     .case-studies-container {
         padding: 5px;
     }
-
     .case-studies-grid {
         grid-template-columns: 1fr;
     }
-
     .case-study-card {
         width: 100%;
         padding: 5px;
     }
-
     .case-study-title {
         font-size: 0.9rem;
     }
-
     .case-study-testimonial {
         font-size: 0.7rem;
     }
-
     .case-study-button {
         font-size: 0.7rem;
         padding: 5px 8px;
     }
 }
-
-

@@ -63,6 +63,8 @@ const CaseStudies = () => {
       <div className="case-studies-grid">
         {caseStudies.map((study, index) => (
           <div key={index} className="case-study-card animated-card">
+         
+              
             <h3 className="case-study-title">{study.title}</h3>
             <p><strong>Client:</strong> {study.client}</p>
             <p><strong>Client Overview:</strong> {study.overview}</p>
