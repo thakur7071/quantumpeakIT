@@ -3,7 +3,7 @@ import "./CaseStudies.css";
 
 const caseStudies = [
   {
-    title: "Modernizing IT Infrastructure for XYZ Corp",
+    title: "Modernizing IT ",
     client: "XYZ Corp",
     overview: "XYZ Corp is a multinational company specializing in finance and technology.",
     challenge:
@@ -13,10 +13,10 @@ const caseStudies = [
     results:
       "Post-implementation, XYZ Corp saw a 40% reduction in IT-related downtime and a 20% increase in operational efficiency.",
     testimonial:
-      "Thanks to our collaboration with [Your Company Name], we’ve seen tremendous growth in both productivity and security.",
+      "Thanks to our collaboration with [Your Company Name], we’ve seen tremendous growth .",
   },
   {
-    title: "Enhancing Cybersecurity for ABC Ltd",
+    title: "Enhancing Cybersecurity ",
     client: "ABC Ltd",
     overview: "ABC Ltd is a leading e-commerce company facing security threats.",
     challenge:
@@ -29,7 +29,7 @@ const caseStudies = [
       "With [Your Company Name]'s expertise, we now have a secure and resilient infrastructure.",
   },
   {
-    title: "Optimizing Supply Chain for LMN Industries",
+    title: "Optimizing Supply",
     client: "LMN Industries",
     overview: "A global manufacturing firm aiming to reduce supply chain inefficiencies.",
     challenge:
@@ -42,7 +42,7 @@ const caseStudies = [
       "[Your Company Name] transformed our supply chain operations, boosting efficiency and cost savings.",
   },
   {
-    title: "Boosting Customer Engagement for DEF Retail",
+    title: "Boosting Customer",
     client: "DEF Retail",
     overview: "DEF Retail is a major retail chain looking to improve customer experience.",
     challenge:
@@ -72,7 +72,7 @@ const CaseStudies = () => {
             <blockquote className="case-study-testimonial">
               {study.testimonial}
             </blockquote>
-            <button className="case-study-button">
+            <button className="case-study-button" style={{background:"#191b3d"}} >
               Request a Consultation
             </button>
           </div>

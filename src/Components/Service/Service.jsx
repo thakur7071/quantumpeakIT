@@ -3,7 +3,7 @@ import "./Service.css";
 
 const services = [
   {
-    title: "IT Strategy & Consulting",
+    title: "IT Consulting",
     description:
       "Our IT strategy consultants work with you to understand your business goals and create a comprehensive technology roadmap that aligns with your objectives, helping you streamline operations and gain a competitive edge.",
     benefits: [
@@ -11,7 +11,7 @@ const services = [
       "Cost-effective solutions aligned with business goals.",
       "Long-term scalability and efficiency.",
     ],
-    cta: "Get Started with IT Strategy",
+    cta: "Explore IT Strategy",
     link: "#",
     icon: <Briefcase size={40} className="service-icon" />, // Icon for IT Strategy
   },
@@ -37,7 +37,7 @@ const services = [
       "Advanced encryption and data protection.",
       "Ongoing monitoring and response strategies.",
     ],
-    cta: "Learn More About Cybersecurity",
+    cta: "Explore Cybersecurity",
     link: "#",
     icon: <Shield size={40} className="service-icon" />, // Icon for Cybersecurity
   },
@@ -84,7 +84,8 @@ const services = [
 
 const Service = () => {
   return (
-    <div className="services-container">
+    <div className="service">   
+       <div className="services-container">
       {services.map((service, index) => (
         <div key={index} className="service-card">
           <div className="service-header">
@@ -103,6 +104,8 @@ const Service = () => {
         </div>
       ))}
     </div>
+    </div>
+
   );
 };
 

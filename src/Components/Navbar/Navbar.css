@@ -19,7 +19,7 @@ body{
   
   .nav {
   height: 90px;
-   background-color: #242452;
+   background-color: #191b3d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,9 +53,6 @@ body{
   padding: 3px;
   border-radius: 4px;
   }
-  
- 
-  
   
   
   /* Hide menu icon by default */

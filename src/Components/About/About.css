@@ -1,11 +1,12 @@
 .about{
     background-color: white;
+    margin-top: 70px;
 }
 
 
 /* ====== Title Section ====== */
 .title {
-    margin: 15px;
+  
     text-align: center;
     padding: 20px;
     opacity: 0;
@@ -25,7 +26,7 @@
     font-weight: bold;
     color: #191b3d;
     margin-bottom: 10px;
-    text-shadow: 0 0 10px #191b3d;
+  
 }
 
 .title p {
