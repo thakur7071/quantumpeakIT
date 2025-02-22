@@ -34,9 +34,51 @@
     text-align: center;
     padding: 50px;
     border-radius: 12px;
-    box-shadow: 10px 15px 20px rgba(25, 27, 61, 0.7);
-  
+    border: 2px solid #191b03;
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+    overflow: hidden; /* Ensures the semi-circles stay inside the card */
 }
+
+/* Top-Right Semi-Circle */
+.case-study-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    border-radius: 12px;
+    border: 2px solid #191b03;
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+    overflow: hidden; /* Ensures the semi-circles stay inside the card */
+}
+
+/* Top-Right Large Semi-Circle */
+.case-study-card::before {
+    content: "";
+    position: absolute;
+    top: -40px;  /* Moves it slightly outside so it blends in */
+    right: -40px;
+    width: 120px; /* Increased size */
+    height: 120px; /* Should be same as width for a perfect semi-circle */
+    background-color: #ffbb03; /* Semi-circle color */
+    border-radius: 0 0 0 120px; /* Creates the top-right semi-circle */
+}
+
+/* Bottom-Left Large Semi-Circle */
+.case-study-card::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;  /* Moves it slightly outside */
+    left: -40px;
+    width: 120px; /* Increased size */
+    height: 120px; /* Should be same as width for a perfect semi-circle */
+    background-color: #ffbb03; /* Semi-circle color */
+    border-radius: 0 120px 0 0; /* Creates the bottom-left semi-circle */
+}
+
+
 .case-study-card strong{
     color: #ffbb03;
 }
