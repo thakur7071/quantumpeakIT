@@ -19,7 +19,7 @@ const Contact = () => {
         <form>
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
-          <input type="tel" placeholder="Your Phone (Optional)" />
+          <input type="tel" placeholder="Your Phone Number" />
           <textarea rows={6} placeholder="Your Message" required></textarea>
           <button type="submit">Send Message</button>
         </form>
@@ -45,6 +45,7 @@ const Contact = () => {
       </div>
 
       {/* Google Map */}
+      
       <h3 className="map-title">Visit Our Office</h3>
       <iframe
         title="Google Map"
