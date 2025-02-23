@@ -113,6 +113,8 @@ body{
       display: block; /* Show menu icon on tablets & smaller */
       color: white;
     }
+
+
   
     .full {
       width: 50%; /* Adjust sidebar width on tablets */
@@ -128,7 +130,7 @@ body{
   @media (max-width: 480px) {
 
   .logo{
-    height: 100px;
+    height: 95px;
   }
 
     .full {

@@ -1,18 +1,13 @@
 .hero-section {
-    background: 
-        url('../Assets/2-removebg-preview.png') no-repeat center center;
-    background-size: contain; /* Ensures the entire image is visible */
-    background-blend-mode: overlay; /* Blends the gradient and image */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
- 
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 90vh;
+width: 100%;
+text-align: center;
+position: relative;
+overflow: hidden;
 }
 
 /* Optional: Ensures the image remains centered while keeping a subtle background */
@@ -35,7 +30,7 @@
 
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 800;
     background: linear-gradient(to right, #86efac, #3b82f6, #7c9cdd);
     -webkit-background-clip: text;

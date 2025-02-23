@@ -1,8 +1,8 @@
 .blog-container {
   max-width: 1600px;
-  margin: 90px auto;
+  margin: 60px auto;
   padding: 20px;
-  font-family: "Arial", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /* Header */
@@ -44,6 +44,7 @@
   background-color: #191b3d;
   border-radius: 12px;
 
+
 }
 
 
@@ -74,7 +75,7 @@
 
 .blog-excerpt {
   font-size: 1rem;
-  color: white;
+color: white;
   margin-bottom: 12px;
 }
 
