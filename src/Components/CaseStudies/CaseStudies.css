@@ -35,6 +35,7 @@
     border: 2px solid #191b03;
     position: relative; /* Needed for absolute positioning of pseudo-elements */
     overflow: hidden; /* Ensures elements stay inside the card */
+    z-index: 2; /* Keeps content above pseudo-elements */
 }
 
 /* Top-Right Large Semi-Circle */
@@ -47,7 +48,7 @@
     height: 120px;
     background-color: #ffbb03;
     border-radius: 0 0 0 120px; /* Creates the top-right semi-circle */
-    z-index: 1;
+    z-index: 1; /* Keeps behind the content */
 }
 
 /* Bottom-Left Large Semi-Circle */
@@ -60,12 +61,18 @@
     height: 120px;
     background-color: #ffbb03;
     border-radius: 0 120px 0 0; /* Creates the bottom-left semi-circle */
-    z-index: 1;
+    z-index: 1; /* Keeps behind the content */
 }
 
-
-
-
+/* Ensure text and button are clearly visible */
+.case-study-title,
+.case-study-testimonial,
+.case-study-button {
+    position: relative;
+    z-index: 3; /* Ensures they stay above the semi-circles */
+  
+    padding: 5px; /* Optional: Adds spacing for readability */
+}
 
 .case-study-card strong {
     color: #ffbb03;
@@ -101,6 +108,10 @@
     cursor: pointer;
     transition: background 0.3s ease;
     font-family: "Josefin Sans", sans-serif;
+    position: relative;
+    z-index: 3;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional: Adds depth */
 }
 
 /* Responsive Design */
