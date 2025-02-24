@@ -19,12 +19,12 @@
     display: flex;
     padding: 50px;
     border-radius: 12px;
-    box-shadow: 5px 8px 10px #191b3d;
+    box-shadow: 3px 8px 10px #191b3d;
     background: #191b3d;
     flex-direction: column;
     justify-content: space-around;
-    
 }
+
 
 .service-benefits,
 .service-cta {
@@ -39,6 +39,8 @@
     margin-bottom: 10px;
 }
 
+
+
 .service-icon {
     color: #ffbb03;
 }
@@ -49,6 +51,7 @@
     color: white;
     font-family: "Josefin Sans", sans-serif; /* Consistent */
 }
+
 
 .service-description {
     font-size: 1rem;
