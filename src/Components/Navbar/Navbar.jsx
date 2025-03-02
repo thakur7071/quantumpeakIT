@@ -17,10 +17,17 @@ const navLinks = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const linkRefs = useRef([]);
 
   useEffect(() => {
     if (isMenuOpen) {
       gsap.to(menuRef.current, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" });
+
+      gsap.fromTo(
+        linkRefs.current,
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 0.5, stagger: 0.13, ease: "power3.out" }
+      );
     } else {
       gsap.to(menuRef.current, { x: "100%", opacity: 0, duration: 0.3 });
     }
@@ -51,18 +58,19 @@ const Navbar = () => {
         ))}
       </div>
 
+      {/* Mobile Menu Icon */}
       <i className="ri-menu-3-line mobile-menu" onClick={() => setIsMenuOpen(true)}></i>
 
       {/* Mobile Menu */}
-      <div ref={menuRef} className={`full ${isMenuOpen ? "open" : ""}`} style={{ transform: "translateX(100%)", opacity: 0 }}>
+      <div ref={menuRef} className="full" style={{ transform: "translateX(100%)", opacity: 0 }}>
         {navLinks.map((link, index) => (
-          <h4 key={index}>
+          <h4 key={index} ref={(el) => (linkRefs.current[index] = el)}>
             <Link to={link.path} onClick={() => setIsMenuOpen(false)} className={link.isButton ? "contact-btn" : ""}>
               {link.name}
             </Link>
           </h4>
         ))}
-        <i className="ri-close-line" onClick={() => setIsMenuOpen(false)}></i>
+        <i className="ri-close-line close-icon" onClick={() => setIsMenuOpen(false)}></i>
       </div>
     </nav>
   );

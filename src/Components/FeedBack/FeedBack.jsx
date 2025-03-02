@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Feedback.css";
+import "./FeedBack.css";
 
 const reviews = [
   { name: "John Doe", photo: "https://i.pravatar.cc/50?img=1", rating: 5, text: "Amazing product! Highly recommend." },
