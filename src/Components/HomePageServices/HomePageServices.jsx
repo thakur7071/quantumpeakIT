@@ -1,4 +1,5 @@
 import { Cloud, Shield, Code, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 import "./HomePageServices.css";
 
 const services = [
@@ -40,7 +41,7 @@ const HomePageService = () => {
         </div>
         {/* Know More Services Button */}
         <div className="homepage-service-button">
-          <a href="/services" className="know-more-btn"> More Services</a>
+          <Link to="/services" className="know-more-btn">More Services</Link>
         </div>
       </div>
     </section>
