@@ -79,7 +79,6 @@ overflow: hidden;
 }
 
 .hero-button.primary:hover {
- background-color: white;
  transform: scale(1.05);
 
 }
