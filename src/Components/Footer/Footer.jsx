@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
@@ -8,9 +7,9 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section contact-info">
           <h3>Contact Us</h3>
-          <p>123 Street Name, City, Country</p>
-          <p>Phone: +123 456 7890</p>
-          <p>Email: contact@yourcompany.com</p>
+          <p>Alambagh Lucknow, Uttar-Pradesh</p>
+          <p>Phone: +91 8114227222</p>
+          <p>Email: info@quantumpeakit.com</p>
         </div>
         
         <div className="footer-section quick-links">

@@ -16,11 +16,7 @@ const ChooseUs = () => {
       title: "Client-Centric Approach",
       description: "We prioritize your success with personalized services.",
     },
-    {
-      title: "Proven Results",
-      description:
-        "Showcase success metrics, such as percentage growth or improved efficiency.",
-    },
+   
   ];
 
   return (

@@ -38,6 +38,10 @@ const HomePageService = () => {
             </div>
           ))}
         </div>
+        {/* Know More Services Button */}
+        <div className="homepage-service-button">
+          <a href="/services" className="know-more-btn"> More Services</a>
+        </div>
       </div>
     </section>
   );

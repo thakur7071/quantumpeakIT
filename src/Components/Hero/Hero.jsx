@@ -16,11 +16,7 @@ const Hero = () => {
 
         <div className="hero-buttons">
           <a className="hero-button primary" href="#">
-            Get Started <FaArrowRight />
-          </a>
-
-          <a className="hero-button secondary" href="#">
-            Learn More <FaArrowRight />
+            Get a Quick Consultation<FaArrowRight />
           </a>
         </div>
       </div>

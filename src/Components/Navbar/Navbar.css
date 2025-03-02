@@ -1,153 +1,158 @@
-/* General styles */
-body{
-    margin:0;
-    padding-top: 56px; /* Add space for the fixed navbar */
-  }
-  
-  .main {
-    position: relative;
-    width: 100%;
-  }
-  .logo {
-    margin-left: -20px;
+/* General Styles */
+body {
+  margin: 0;
+  padding-top: 56px; /* Offset for fixed navbar */
+}
+
+.main {
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  margin-left: -20px;
   margin-top: 10px;
-    height: 120px; /* Adjust as needed */
-    width: auto; /* Keeps the aspect ratio */
-    object-fit: contain; /* Ensures the image scales properly */
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
 
-  }
-  
-  
-  .nav {
+/* Navbar Styling */
+.nav {
   height: 90px;
-   background-color: #191b3d;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:  20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-  
-  
-  }
-  
-  .nav h2 {
-    margin: 0;
-    font-size: 22px;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links {
-    text-decoration: none;
-    font-size: 18px;
-  }
+  background-color: #191b3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Soft shadow */
+}
 
-  .nav-links a:hover{
-    color: #ffbb03;
-  }
-  
-  .nav-links a{
+/* Centering Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links a {
   color: white;
-  padding: 3px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
   border-radius: 4px;
-  }
-  
-  
-  /* Hide menu icon by default */
-  .mobile-menu {
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  /* Sidebar menu */
-  .full {
-    height: 100vh;
-    width: 40%;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    right: 0;
-    padding: 100px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-  }
-  
-  .full h4 a {
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-  }
-  
-.full h4 a:hover{
+}
+
+.nav-links a:hover {
   color: #ffbb03;
 }
 
-  .full i {
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
+/* Contact Button */
+.contact-btn {
+  background-color: #ffbb03;
+  color: #191b3d !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Full-Screen Sidebar */
+.full {
+  height: 100vh;
+  width: 40%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  right: 0;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center links horizontally */
+  justify-content: center; /* Center links vertically */
+  gap: 20px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+/* Centering Links Inside Mobile Menu */
+.full h4 {
+  text-align: center;
+  width: 100%;
+}
+
+.full h4 a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  display: inline-block;
+  width: 100%;
+  text-align: center; /* Ensures links are centered */
+}
+
+.full h4 a:hover {
+  color: #ffbb03;
+}
+
+/* Close Button */
+.full i {
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none; /* Hide links for smaller screens */
+  }
+
+  .mobile-menu {
+    display: block; /* Show menu icon */
     color: white;
   }
-  
-  /* ✅ Responsive Design */
-  @media (max-width: 1024px) {
-    .nav-links {
-      display: none; /* Hide links for smaller screens */
-    }
-  
-    .mobile-menu {
-      display: block; /* Show menu icon on tablets & smaller */
-      color: white;
-    }
 
-
-  
-    .full {
-      width: 50%; /* Adjust sidebar width on tablets */
-    }
+  .full {
+    width: 50%;
   }
-  
-  @media (max-width: 768px) {
-    .full {
-      width: 60%; /* Wider sidebar on smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
+}
 
-  .logo{
+@media (max-width: 768px) {
+  .full {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
     height: 95px;
   }
 
-    .full {
-      width: 70%; /* Full-screen menu for small phones */
-      padding: 120px 40px;
-    }
-
-  
-    .full h4 a {
-      font-size: 20px; /* Adjust text size */
-    }
-  
-    .nav h2 {
-      font-size: 20px; /* Reduce logo size */
-    }
+  .full {
+    width: 70%;
+    padding: 120px 40px;
   }
 
+  .full h4 a {
+    font-size: 20px;
+  }
 
-  
-  
+  .nav h2 {
+    font-size: 20px;
+  }
+}

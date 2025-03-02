@@ -90,6 +90,34 @@
     line-height: 1.5;
 }
   
+
+
+.homepage-service-button {
+    text-align: center;
+    margin-top: 40px;
+ 
+
+  }
+  
+  .know-more-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ffbb03;
+    color: #191b3d;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .know-more-btn:hover {
+    background-color: #ffbb03;
+    color: #191b3d;
+  }
+  
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .homepage-service-grid {
@@ -119,3 +147,5 @@
         color: #f5f5f5;
     }
 }
+
+

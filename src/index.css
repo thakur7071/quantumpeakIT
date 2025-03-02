@@ -4,10 +4,8 @@
 
 /* Global Reset */
 * {
-
- 
     box-sizing: border-box;
-}
+  }
 
 /* Apply Global Font */
 body {

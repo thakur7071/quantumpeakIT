@@ -51,7 +51,8 @@
 }
 
 .footer-section ul li a:hover {
-  color: #1da1f2;
+  color: #ffbb03;
+  
 }
 
 /* Social Icons */
@@ -69,7 +70,7 @@
 }
 
 .social-icons a:hover {
-  color: #1da1f2;
+  color: #ffbb03;
   transform: scale(1.2);
 }
 

@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import "./Navbar.css";
 import "remixicon/fonts/remixicon.css";
-// import logo from '../../assets/2.svg';
-import img from '../Assets/2-removebg-preview.png'
+import img from "../Assets/2-removebg-preview.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -12,84 +11,60 @@ const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Case Studies", path: "/casestudies" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact Us", path: "/contact", isButton: true },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
-  const linksRef = useRef([]);
-  const overlayRef = useRef(null);
-  const closeBtnRef = useRef(null);
 
   useEffect(() => {
     if (isMenuOpen) {
-      // GSAP Animation for opening menu
-      gsap.to(overlayRef.current, { opacity: 1, display: "block", duration: 0.3 });
-      gsap.fromTo(
-        menuRef.current,
-        { x: "100%", opacity: 0, scale: 0.9 },
-        { x: "0%", opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }
-      );
-      gsap.fromTo(
-        linksRef.current,
-        { opacity: 0, x: 40 },
-        { opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: "power3.out" }
-      );
-      gsap.fromTo(
-        closeBtnRef.current,
-        { opacity: 0, rotate: -180, scale: 0.5 },
-        { opacity: 1, rotate: 0, scale: 1, duration: 0.5, ease: "back.out(1.7)" }
-      );
+      gsap.to(menuRef.current, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" });
     } else {
-      // Instantly hide the menu without animation
-      gsap.set(menuRef.current, { x: "100%", opacity: 0, scale: 0.9 });
-      gsap.set(overlayRef.current, { opacity: 0, display: "none" });
+      gsap.to(menuRef.current, { x: "100%", opacity: 0, duration: 0.3 });
     }
   }, [isMenuOpen]);
 
+  // Close menu on window resize if screen width is greater than 768px
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="main">
-      <div className="nav">
+    <nav className="nav">
       <img src={img} alt="Logo" className="logo" />
 
-        <i className="ri-menu-3-line mobile-menu" onClick={() => setIsMenuOpen(true)}></i>
-
-        {/* Desktop Navigation */}
-        <div className="nav-links">
-          {navLinks.map((link, index) => (
-            <Link key={index} to={link.path}>
-              {link.name}
-            </Link>
-          ))}
-        </div>
+      {/* Desktop Links */}
+      <div className="nav-links">
+        {navLinks.map((link, index) => (
+          <Link key={index} to={link.path} className={link.isButton ? "contact-btn" : ""}>
+            {link.name}
+          </Link>
+        ))}
       </div>
 
-      {/* Overlay */}
-      <div ref={overlayRef} className="overlay" onClick={() => setIsMenuOpen(false)}></div>
+      <i className="ri-menu-3-line mobile-menu" onClick={() => setIsMenuOpen(true)}></i>
 
-      {/* Mobile Full-Screen Menu */}
-      <div
-        ref={menuRef}
-        className="full"
-        style={{ display: isMenuOpen ? "flex" : "none" }} // Hide instantly when closed
-      >
+      {/* Mobile Menu */}
+      <div ref={menuRef} className={`full ${isMenuOpen ? "open" : ""}`} style={{ transform: "translateX(100%)", opacity: 0 }}>
         {navLinks.map((link, index) => (
           <h4 key={index}>
-            <Link
-              to={link.path}
-              ref={(el) => (linksRef.current[index] = el)}
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <Link to={link.path} onClick={() => setIsMenuOpen(false)} className={link.isButton ? "contact-btn" : ""}>
               {link.name}
             </Link>
           </h4>
         ))}
-
-        {/* Close Button */}
-        <i ref={closeBtnRef} className="ri-close-line" onClick={() => setIsMenuOpen(false)}></i>
+        <i className="ri-close-line" onClick={() => setIsMenuOpen(false)}></i>
       </div>
-    </div>
+    </nav>
   );
 };
 
