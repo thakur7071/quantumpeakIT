@@ -54,15 +54,14 @@
   position: relative;
   width: 100%;
   margin-bottom: 15px;
+
 }
 
 .input-icon {
-
   position: absolute;
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-
   color: #191b3d;
   opacity: 0.8;
 }
@@ -97,12 +96,15 @@ select {
 
 /* Service Selection Dropdown */
 .select-group {
+
+
   position: relative;
   width: 100%;
   margin-bottom: 15px;
 }
 
 .select-group select {
+  font-family: "Josefin Sans", sans-serif;
   width: 100%;
   max-width: 100%;
   padding-left: 45px;
@@ -118,6 +120,7 @@ select {
 
 /* Button */
 button {
+  font-family: "Josefin Sans", sans-serif;
   width: 100%;
   padding: 14px;
   background: #191b3d;
