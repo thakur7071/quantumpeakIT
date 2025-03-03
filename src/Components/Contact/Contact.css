@@ -54,18 +54,45 @@
   position: relative;
   width: 100%;
   margin-bottom: 15px;
-
 }
 
 .input-icon {
   position: absolute;
-  left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  color: #191b3d;
-  opacity: 0.8;
+  color: #fff;
+  background-color: #191b3d;
+  padding: 8px;
+  border-top-left-radius: 6px; /* Rounded top-left */
+  border-bottom-left-radius: 6px; /* Rounded bottom-left */
+  border-top-right-radius: 0; /* No rounding on the right */
+  border-bottom-right-radius: 0; /* No rounding on the right */
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* Input Field Styling */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px 14px 14px 65px; /* Adjusted padding for vertical line */
+  border: 2px solid #191b3d;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9f9f9;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+/* Textarea Styling */
 .textarea-group {
   position: relative;
   width: 100%;
@@ -80,34 +107,21 @@
   opacity: 0.8;
 }
 
-/* Input Field Styling */
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 14px 14px 14px 45px;
-  border: 2px solid #191b3d;
-  border-radius: 8px;
-  font-size: 16px;
-  background: #f9f9f9;
-  transition: 0.3s ease-in-out;
-}
-
-
 /* Service Selection Dropdown */
 .select-group {
-
-
   position: relative;
   width: 100%;
   margin-bottom: 15px;
 }
 
+
+
+
 .select-group select {
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
   max-width: 100%;
-  padding-left: 45px;
+  padding-left: 65px;
   background: #fff;
   border: 2px solid #191b3d;
   border-radius: 8px;
@@ -115,8 +129,6 @@ select {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-
-
 
 /* Button */
 button {
@@ -210,6 +222,10 @@ iframe {
   .contact-form {
     padding: 25px;
   }
+
+  .input-group::after {
+    left: 50px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -228,5 +244,9 @@ iframe {
   button {
     font-size: 16px;
     padding: 12px;
+  }
+
+  .input-group::after {
+    left: 45px;
   }
 }
