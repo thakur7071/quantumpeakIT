@@ -63,8 +63,6 @@ body {
   display: flex !important; /* Ensures flexbox centering */
   align-items: center; /* Vertically centers text */
   justify-content: center; /* Horizontally centers text */
-
- 
 }
 
 

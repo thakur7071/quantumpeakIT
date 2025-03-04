@@ -28,21 +28,18 @@
     height: auto;
     z-index: 2;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #f4f4f4, #eaeaea);
     border-radius: 12px;
-    backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 /* Hero Title */
 .hero-title {
     font-size: clamp(2.8rem, 5vw, 4rem);
     font-weight: 800;
-    background: linear-gradient(to right, #86efac, #3b82f6, #7c9cdd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #191b3d;
     line-height: 1.2;
 }
 
@@ -52,7 +49,7 @@
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     line-height: 1.6;
     opacity: 0.9;
-    color: white;
+    color: #191b3d;
 }
 
 /* Buttons */
@@ -101,7 +98,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.4);
+    /* background: rgba(0, 0, 0, 0.4); */
 }
 
 /* Large Screens */
