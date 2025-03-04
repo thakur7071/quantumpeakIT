@@ -6,6 +6,7 @@
     justify-content: center;
     max-width: 100%;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    background: linear-gradient(to right, #f4f4f4, #eaeaea);
   }
   
   /* Review Card Styling */
