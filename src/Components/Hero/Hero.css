@@ -15,7 +15,12 @@
 .hero-container {
     width: 50%;
     z-index: 2;
+    background: url("../../Components/Assets/2-removebg-preview.png") no-repeat center center;
+    background-size: contain; /* Ensures the entire image fits inside */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
 }
+
 
 /* Right Background Image */
 .hero-image {
