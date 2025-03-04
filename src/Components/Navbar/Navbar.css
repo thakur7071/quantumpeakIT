@@ -60,7 +60,13 @@ body {
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
+  display: flex !important; /* Ensures flexbox centering */
+  align-items: center; /* Vertically centers text */
+  justify-content: center; /* Horizontally centers text */
+
+ 
 }
+
 
 
 /* Mobile Menu */
@@ -88,9 +94,8 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* Centering Links Inside Mobile Menu */
 .full h4 {
-  text-align: center;
+  text-align: left; /* Aligns the text inside h4 to the left */
   width: 100%;
 }
 
@@ -98,10 +103,12 @@ body {
   color: white;
   text-decoration: none;
   font-size: 22px;
-  display: inline-block;
+  display: block; /* Change to block for proper left alignment */
   width: 100%;
-  text-align: center; /* Ensures links are centered */
+  text-align: left; /* Ensures links align to the left */
+  padding-left: 20px; /* Optional: Adjust left spacing */
 }
+
 
 .full h4 a:hover {
   color: #ffbb03;
