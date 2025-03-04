@@ -125,9 +125,18 @@
         padding: 40px;
     }
     .hero-container {
+        background: none;
         width: 75%;
         text-align: center;
         padding: 30px;
+        backdrop-filter: blur(4px);
+    }
+
+    .hero-title{
+        color: white;
+    }
+    .hero-description{
+        color: white;
     }
     .hero-buttons {
         justify-content: center;
@@ -142,15 +151,18 @@
         padding: 30px 5%;
     }
     .hero-container {
+        background: none;
         width: 90%;
         text-align: center;
         padding: 20px;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(4px);
     }
     .hero-title {
+        color: white;
         font-size: 2rem;
     }
     .hero-description {
+        color: white;
         font-size: 1rem;
         max-width: 100%;
     }
