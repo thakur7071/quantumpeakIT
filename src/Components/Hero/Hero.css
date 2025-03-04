@@ -1,54 +1,61 @@
 .hero-section {
-color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-height: 90vh;
-width: 100%;
-text-align: center;
-position: relative;
-overflow: hidden;
-}
-
-/* Optional: Ensures the image remains centered while keeping a subtle background */
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
     width: 100%;
-    height: 100%;
-    background: rgba(51, 132, 203, 0.3); /* Dark overlay for subtle visibility */
-    z-index: 1;
+    padding: 0 5%;
+    color: white;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Ensure content appears above the background */
+/* Left Content */
 .hero-container {
-    position: relative;
+    width: 50%;
     z-index: 2;
 }
 
+/* Right Background Image */
+.hero-image {
+    width: 50%;
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=80") no-repeat center center/cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
+/* Overlay for better readability */
+.hero-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Title */
 .hero-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 800;
     background: linear-gradient(to right, #86efac, #3b82f6, #7c9cdd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: slideInFromLeft 1s ease-in-out;
+    line-height: 1.2;
 }
 
-.hero-title span {
-    display: block;
-}
-
+/* Hero Description */
 .hero-description {
-    margin: 20px auto;
-    max-width: 600px;
+    margin-top: 20px;
+    max-width: 80%;
     font-size: 1.2rem;
     line-height: 1.6;
     opacity: 0.9;
-    animation: fadeIn 2s ease-in-out;
+    color: #191b3d;
 }
 
 /* Buttons */
@@ -56,14 +63,14 @@ overflow: hidden;
     margin-top: 32px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 16px;
 }
 
 .hero-button {
     display: inline-flex;
     align-items: center;
-    padding: 12px 12px;
+    justify-content: center;
+    padding: 12px 16px;
     font-size: 1.3rem;
     font-weight: 600;
     text-decoration: none;
@@ -77,51 +84,100 @@ overflow: hidden;
     color: #191b3d;
 }
 
-
-
 /* Button Icon Styling */
 .hero-button svg {
     margin-left: 8px;
     font-size: 1.2rem;
 }
 
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* 📌 Responsive Design */
+
+/* ✅ Large Tablets (768px - 1023px) */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0px;
     }
-    to {
-        opacity: 1;
+    .hero-container {
+        width: 90%;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+  
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        height: 50%;
     }
 }
 
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* ✅ Small Tablets & Large Mobiles (480px - 767px) */
+@media (max-width: 767px) {
     .hero-title {
         font-size: 2.5rem;
     }
     .hero-description {
         font-size: 1rem;
+        max-width: 90%;
+        line-height: 1.5;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .hero-button {
+        font-size: 1.2rem;
+        padding: 10px 14px;
+        width: 80%;
+        text-align: center;
     }
 }
 
-@media (max-width: 480px) {
+/* ✅ Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
     .hero-title {
         font-size: 2rem;
     }
     .hero-description {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        max-width: 100%;
     }
-  
+    .hero-buttons {
+        gap: 10px;
+    }
+    .hero-button {
+        font-size: 1rem;
+        padding: 8px 12px;
+        width: 90%;
+    }
+}
+
+/* ✅ Ultra Small Mobile (100px - 319px) */
+@media (max-width: 319px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .hero-description {
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+    .hero-button {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+        width: 95%;
+    }
 }

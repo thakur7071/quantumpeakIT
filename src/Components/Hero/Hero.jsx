@@ -16,10 +16,13 @@ const Hero = () => {
 
         <div className="hero-buttons">
           <a className="hero-button primary" href="#">
-            Get a Quick Consultation<FaArrowRight />
+            Get a Quick Consultation <FaArrowRight />
           </a>
         </div>
       </div>
+
+      {/* Right-side Image */}
+      <div className="hero-image"></div>
     </section>
   );
 };
