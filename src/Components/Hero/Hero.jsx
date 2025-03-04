@@ -3,6 +3,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
+    <div className="hero-main">
     <section className="hero-section">
       <div className="hero-container">
         <h1 className="hero-title">
@@ -21,9 +22,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right-side Image */}
+    
       <div className="hero-image"></div>
     </section>
+    </div>
   );
 };
 
