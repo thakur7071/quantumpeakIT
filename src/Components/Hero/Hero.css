@@ -32,7 +32,6 @@
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    
 }
 
 /* Hero Title */
@@ -77,7 +76,7 @@
     color: #191b3d;
 }
 
-/* Full-Screen Background Image */
+/* Full-Screen Background Image with Zoom Effect */
 .hero-image {
     position: absolute;
     top: 0;
@@ -88,6 +87,19 @@
     background-size: cover;
     background-position: center;
     max-width: 100%;
+    
+    /* Zoom-in animation */
+    animation: zoomIn 10s ease-in-out infinite alternate;
+}
+
+/* Keyframes for Zoom-in Effect */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 /* Overlay for better readability */
@@ -98,7 +110,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    /* background: rgba(0, 0, 0, 0.4); */
+    background: rgba(0, 0, 0, 0.1);
 }
 
 /* Large Screens */
@@ -132,10 +144,10 @@
         backdrop-filter: blur(4px);
     }
 
-    .hero-title{
+    .hero-title {
         color: white;
     }
-    .hero-description{
+    .hero-description {
         color: white;
     }
     .hero-buttons {
@@ -170,13 +182,8 @@
     .hero-button {
         font-size: 1rem;
         padding: 10px 14px;
-        
     }
 }
-
-
-
-
 
 /* Ultra Small Devices */
 @media (max-width: 320px) {
@@ -191,7 +198,6 @@
     .hero-button {
         font-size: 0.9rem;
         padding: 6px 10px;
-        
     }
 }
 
@@ -209,6 +215,3 @@
         width: 100%;
     }
 }
-
-
-
