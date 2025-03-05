@@ -1,4 +1,15 @@
-import { Briefcase, Cloud, Shield } from "lucide-react"; // Import icons
+import { 
+  Briefcase, 
+  Cloud, 
+  Shield, 
+  Code, 
+  Network, 
+  Headphones, 
+  Database, 
+  Paintbrush, 
+  MonitorSmartphone, 
+  Layers 
+} from "lucide-react"; // Import icons
 import "./Service.css";
 
 const services = [
@@ -13,7 +24,7 @@ const services = [
     ],
     cta: "Explore IT Strategy",
     link: "#",
-    icon: <Briefcase size={40} className="service-icon" />, // Icon for IT Strategy
+    icon: <Briefcase size={40} className="service-icon" />,
   },
   {
     title: "Cloud Solutions",
@@ -26,7 +37,7 @@ const services = [
     ],
     cta: "Explore Cloud Solutions",
     link: "#",
-    icon: <Cloud size={40} className="service-icon" />, // Icon for Cloud Solutions
+    icon: <Cloud size={40} className="service-icon" />,
   },
   {
     title: "Cybersecurity",
@@ -39,47 +50,71 @@ const services = [
     ],
     cta: "Explore Cybersecurity",
     link: "#",
-    icon: <Shield size={40} className="service-icon" />, // Icon for Cybersecurity
+    icon: <Shield size={40} className="service-icon" />,
   },
   {
-    title: "Cybersecurity",
+    title: "Software Development",
     description:
-      "In an increasingly digital world, cybersecurity is critical. We provide end-to-end security services to safeguard your business from emerging threats, with solutions tailored to your specific needs.",
-    benefits: [
-      "Comprehensive risk assessment.",
-      "Advanced encryption and data protection.",
-      "Ongoing monitoring and response strategies.",
-    ],
-    cta: "Learn More About Cybersecurity",
+      "We provide custom software solutions tailored to your business needs, ensuring efficiency and scalability in your operations.",
+    benefits: ["Custom applications", "Scalable architectures", "Agile development process"],
+    cta: "Explore Software Development",
     link: "#",
-    icon: <Shield size={40} className="service-icon" />, // Icon for Cybersecurity
+    icon: <Code size={40} className="service-icon" />,
   },
   {
-    title: "Cybersecurity",
+    title: "Network Marketing",
     description:
-      "In an increasingly digital world, cybersecurity is critical. We provide end-to-end security services to safeguard your business from emerging threats, with solutions tailored to your specific needs.",
-    benefits: [
-      "Comprehensive risk assessment.",
-      "Advanced encryption and data protection.",
-      "Ongoing monitoring and response strategies.",
-    ],
-    cta: "Learn More About Cybersecurity",
+      "Leverage our expertise in network marketing to grow your business through effective strategies and partnerships.",
+    benefits: ["Strategic growth planning", "Lead generation", "Optimized networking"],
+    cta: "Explore Network Marketing",
     link: "#",
-    icon: <Shield size={40} className="service-icon" />, // Icon for Cybersecurity
+    icon: <Network size={40} className="service-icon" />,
   },
   {
-    title: "Cybersecurity",
+    title: "Tech Support",
     description:
-      "In an increasingly digital world, cybersecurity is critical. We provide end-to-end security services to safeguard your business from emerging threats, with solutions tailored to your specific needs.",
-    benefits: [
-      "Comprehensive risk assessment.",
-      "Advanced encryption and data protection.",
-      "Ongoing monitoring and response strategies.",
-    ],
-    cta: "Learn More About Cybersecurity",
+      "Our dedicated tech support team ensures that your business runs smoothly with prompt and effective solutions.",
+    benefits: ["24/7 Support", "Quick issue resolution", "Expert guidance"],
+    cta: "Explore Tech Support",
     link: "#",
-    icon: <Shield size={40} className="service-icon" />, // Icon for Cybersecurity
+    icon: <Headphones size={40} className="service-icon" />,
   },
+  {
+    title: "Data Backup & Recovery",
+    description:
+      "Ensure your critical business data is always secure with our comprehensive backup and recovery solutions.",
+    benefits: ["Automated backups", "Disaster recovery", "Data integrity protection"],
+    cta: "Explore Data Backup & Recovery",
+    link: "#",
+    icon: <Database size={40} className="service-icon" />,
+  },
+  {
+    title: "UI/UX Designing",
+    description:
+      "We create user-friendly and visually appealing digital experiences to enhance customer engagement.",
+    benefits: ["User research", "Wireframing & prototyping", "Responsive designs"],
+    cta: "Explore UI/UX Designing",
+    link: "#",
+    icon: <Paintbrush size={40} className="service-icon" />,
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Boost your brand’s online presence with our digital marketing strategies, including SEO, social media, and PPC.",
+    benefits: ["SEO optimization", "Social media marketing", "Paid advertising campaigns"],
+    cta: "Explore Digital Marketing",
+    link: "#",
+    icon: <MonitorSmartphone size={40} className="service-icon" />,
+  },
+  {
+    title: "3D & 2D Modeling",
+    description:
+      "Bring your ideas to life with high-quality 3D and 2D modeling for games, architecture, and animation.",
+    benefits: ["High-detail 3D models", "2D illustrations", "Animation-ready assets"],
+    cta: "Explore 3D & 2D Modeling",
+    link: "#",
+    icon: <Layers size={40} className="service-icon" />,
+  }
 ];
 
 const Service = () => {
@@ -101,13 +136,10 @@ const Service = () => {
           <a href={service.link} className="service-cta">
             {service.cta}
           </a>
-        
         </div>
-         
       ))}
     </div>
     </div>
-
   );
 };
 

@@ -7,11 +7,7 @@ const About = () => {
       <div className="title">
         <h1>QuantumPeakIT</h1>
         <p>
-          Founded in 2025, we are a leading IT consulting firm dedicated to
-          helping businesses optimize their technology infrastructure, mitigate
-          risks, and drive innovation. With years of experience across various
-          industries, we specialize in tailored IT strategies that align with
-          your business goals.
+        Founded in 2025, we are a leading IT consulting firm dedicated to helping businesses optimize their technology infrastructure, mitigate risks, and drive innovation. With years of experience across various industries, we specialize in tailored IT strategies that align with your business goals
         </p>
       </div>
 
@@ -19,16 +15,13 @@ const About = () => {
         <div className="our-mission">
           <h2>Mission</h2>
           <p>
-            To empower businesses with innovative IT solutions that accelerate
-            growth and ensure long-term success.
+          To empower organizations with state-of-the-art IT solutions that drive efficiency, security, and growth.
           </p>
         </div>
         <div className="vision">
           <h2>Vision</h2>
           <p>
-            To be a trusted partner in the digital transformation journey,
-            delivering cutting-edge solutions that help businesses thrive in a
-            technology-driven world.
+         To be a globally recognized IT consulting form that transform business through innovation and technology
           </p>
         </div>
       </div>
@@ -54,8 +47,7 @@ const About = () => {
             />
           </div>
           <p className="about-content">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit
-            illum provident a, ipsa maiores deleniti consectetur nobis et eaque.
+          With over 15 years of experience in the IT consulting industry, John leads the team with a vision to bring groundbreaking solutions to clients globally
           </p>
         </div>
 
@@ -72,8 +64,7 @@ const About = () => {
             />
           </div>
           <p className="about-content">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit
-            illum provident a, ipsa maiores deleniti consectetur nobis et eaque.
+          With over 15 years of experience in the IT consulting industry, John leads the team with a vision to bring groundbreaking solutions to clients globally
           </p>
         </div>
 
@@ -86,8 +77,7 @@ const About = () => {
             <img alt="Author" src={img} className="about-image" />
           </div>
           <p className="about-content">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit
-            illum provident a, ipsa maiores deleniti consectetur nobis et eaque.
+          With over 15 years of experience in the IT consulting industry, John leads the team with a vision to bring groundbreaking solutions to clients globally
           </p>
         </div>
       </div>

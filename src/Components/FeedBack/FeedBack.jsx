@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import "./FeedBack.css";
+import newPhoto from "../../Components/Assets/new.jpg"
 
 const reviews = [
-  { name: "John Doe", photo: "https://i.pravatar.cc/50?img=1", rating: 5, text: "Amazing product! Highly recommend." },
-  { name: "Jane Smith", photo: "https://i.pravatar.cc/50?img=2", rating: 4, text: "Customer service was top-notch." },
-  { name: "Alice Brown", photo: "https://i.pravatar.cc/50?img=3", rating: 5, text: "Best purchase I've made this year!" },
-  { name: "Bob Johnson", photo: "https://i.pravatar.cc/50?img=4", rating: 4, text: "Exceeded my expectations!" },
-  { name: "Charlie Davis", photo: "https://i.pravatar.cc/50?img=5", rating: 5, text: "Very high quality, worth the price." },
-  { name: "Emma Wilson", photo: "https://i.pravatar.cc/50?img=6", rating: 4, text: "Fast delivery and great packaging." }
+  { name: "John Doe", photo: newPhoto, rating: 5, text: "Amazing product! Highly recommend." },
+  { name: "Jane Smith", photo: newPhoto, rating: 4, text: "Customer service was top-notch." },
+  { name: "Alice Brown", photo: newPhoto, rating: 5, text: "Best purchase I've made this year!" },
+  { name: "Bob Johnson", photo: newPhoto, rating: 4, text: "Exceeded my expectations!" },
+  { name: "Charlie Davis", photo: newPhoto, rating: 5, text: "Very high quality, worth the price." },
+  { name: "Emma Wilson", photo: newPhoto, rating: 4, text: "Fast delivery and great packaging." }
 ];
 
 const Feedback= () => {

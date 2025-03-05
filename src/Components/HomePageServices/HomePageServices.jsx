@@ -26,10 +26,15 @@ const services = [
 ];
 
 const HomePageService = () => {
+  const handleNavigation = () => {
+    window.scrollTo(0, 0); // Instantly jumps to the top
+  };
+
   return (
     <section className="homepage-service-section">
       <div className="homepage-service-container">
         <h2 className="homepage-service-title">Our Services</h2>
+        
         <div className="homepage-service-grid">
           {services.map((service, index) => (
             <div key={index} className="homepage-service-card">
@@ -39,9 +44,12 @@ const HomePageService = () => {
             </div>
           ))}
         </div>
-        {/* Know More Services Button */}
+
+        {/* "More Services" Button with Instant Scroll */}
         <div className="homepage-service-button">
-          <Link to="/services" className="know-more-btn">More Services</Link>
+          <Link to="/services" className="know-more-btn" onClick={handleNavigation}>
+            More Services
+          </Link>
         </div>
       </div>
     </section>

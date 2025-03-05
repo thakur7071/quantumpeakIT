@@ -7,12 +7,12 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-container">
         <h1 className="hero-title">
-          Understand User Flow.
-          <span>Increase Conversion.</span>
+          Empowring Your Business with
+          <span> Advanced IT Solutions</span>
         </h1>
 
         <p className="hero-description">
-          Optimize your user experience, boost engagement, and drive more conversions with data-driven insights.
+        Unlock the full potential of technology with our expert IT consulting services tailored to your business needs
         </p>
 
         <div className="hero-buttons">
