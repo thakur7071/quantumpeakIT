@@ -47,7 +47,10 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      <Link to="/"><img src={img} alt="Logo" className="logo" /></Link>
+    <Link to="/" onClick={() => window.scrollTo({ top: 0 })}>
+  <img src={img} alt="Logo" className="logo" />
+</Link>
+
 
       {/* Desktop Links */}
       <div className="nav-links">
