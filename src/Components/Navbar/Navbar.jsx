@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      <img src={img} alt="Logo" className="logo" />
+      <Link to="/"><img src={img} alt="Logo" className="logo" /></Link>
 
       {/* Desktop Links */}
       <div className="nav-links">
