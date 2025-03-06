@@ -45,12 +45,16 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Smooth scroll to the top when clicking the logo
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav className="nav">
-    <Link to="/" onClick={() => window.scrollTo({ top: 0 })}>
-  <img src={img} alt="Logo" className="logo" />
-</Link>
-
+      <Link to="/" onClick={handleLogoClick}>
+        <img src={img} alt="Logo" className="logo" />
+      </Link>
 
       {/* Desktop Links */}
       <div className="nav-links">

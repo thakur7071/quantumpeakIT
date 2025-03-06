@@ -27,7 +27,9 @@ const services = [
 
 const HomePageService = () => {
   const handleNavigation = () => {
-    window.scrollTo(0, 0); // Instantly jumps to the top
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100); // Adds a slight delay for a better UX
   };
 
   return (
@@ -45,7 +47,7 @@ const HomePageService = () => {
           ))}
         </div>
 
-        {/* "More Services" Button with Instant Scroll */}
+        {/* "More Services" Button with Smooth Scroll */}
         <div className="homepage-service-button">
           <Link to="/services" className="know-more-btn" onClick={handleNavigation}>
             More Services
