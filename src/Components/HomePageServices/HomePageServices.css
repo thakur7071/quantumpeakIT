@@ -53,15 +53,11 @@
     left: 0;
     width: 100%;
     height: 5px;
-    background: rgb(165, 217, 238);
+    background: #007bff;
     transition: height 0.3s ease-in-out;
 }
   
-.homepage-service-card:hover::before {
-    height: 100%;
-    opacity: 0.1;
-}
-  
+
 /* Service Icons */
 .homepage-service-icon {
     font-size: 3rem;
@@ -111,11 +107,7 @@
     transition: background 0.3s ease-in-out;
   }
   
-  .know-more-btn:hover {
-    background-color: #ffbb03;
-    color: #191b3d;
-  }
-  
+
 
 
 /* Responsive Design */
