@@ -1,120 +1,183 @@
+/* Feedback Section */
+.feedback-section {
+  padding: 20px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #f4f4f4, #eaeaea);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Feedback Heading */
+.feedback-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #191b3d;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  
+}
+
+
+/* Review Container */
 .review-container {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-    padding: 20px;
-    justify-content: center;
-    max-width: 100%;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    background: linear-gradient(to right, #f4f4f4, #eaeaea);
-  }
-  
-  /* Review Card Styling */
-  .review-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    min-width: 300px;
-    max-width: 400px;
-    flex: 1; /* Makes cards flexible */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Review Card Styling */
+.review-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  max-width: 380px;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 0.5s forwards ease-in-out;
+}
+
+/* Add delay for cascading effect */
+.review-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.review-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Hover Effect */
+.review-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Review Header */
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.review-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #191b3d;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Review Text */
+.review-text {
+  font-size: 15px;
+  color: #191b3d;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Rating Stars */
+.rating {
+  font-size: 18px;
+  color: #f4b400;
+  margin: 0;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    transform: translateX(50px);
-    animation: slideIn 0.5s forwards;
   }
-  
-  /* Hover Effect */
-  .review-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  to {
+    opacity: 1;
   }
-  
-  /* Review Header */
-  .review-header {
-    display: flex;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .feedback-heading {
+    font-size: 28px;
+  }
+
+  .review-container {
+    justify-content: center;
+  }
+
+  .review-card {
+    min-width: 260px;
+    max-width: 340px;
+  }
+}
+
+/* Mobile Phones (480px - 768px) */
+@media (max-width: 768px) {
+  .feedback-section {
+    padding: 40px 15px;
+  }
+
+  .feedback-heading {
+    font-size: 26px;
+  }
+
+  .review-container {
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
   }
-  
+
+  .review-card {
+    min-width: 92%;
+    max-width: 95%;
+  }
+}
+
+/* Small Phones (up to 480px) */
+@media (max-width: 480px) {
+  .feedback-section {
+    padding: 30px 10px;
+  }
+
+  .feedback-heading {
+    font-size: 24px;
+  }
+
+  .review-card {
+    min-width: 100%;
+    padding: 16px;
+  }
+
   .review-photo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 3px solid #007bff;
+    width: 50px;
+    height: 50px;
   }
-  
+
   .review-text {
     font-size: 14px;
-    color: #555;
-    line-height: 1.5;
   }
-  
-  /* Rating Stars */
+
   .rating {
     font-size: 16px;
-    color: #f4b400;
-    margin: 0;
   }
-  
-  /* Slide-in Animation */
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* Responsive Design */
-  
-  /* Tablets (768px - 1024px) */
-  @media (max-width: 1024px) {
-    .review-container {
-      justify-content: center;
-    }
-  
-    .review-card {
-      min-width: 250px;
-      max-width: 350px;
-    }
-  }
-  
-  /* Mobile Phones (480px - 768px) */
-  @media (max-width: 768px) {
-    .review-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .review-card {
-      min-width: 90%;
-      max-width: 95%;
-    }
-  }
-  
-  /* Small Phones (up to 480px) */
-  @media (max-width: 480px) {
-    .review-card {
-      min-width: 100%;
-      padding: 15px;
-    }
-  
-    .review-photo {
-      width: 50px;
-      height: 50px;
-    }
-  
-    .review-text {
-      font-size: 13px;
-    }
-  
-    .rating {
-      font-size: 14px;
-    }
-  }
-  
+}
