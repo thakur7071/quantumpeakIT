@@ -1,4 +1,4 @@
-import  { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import "./Blog.css";
 
 const blogPosts = [
@@ -39,11 +39,10 @@ const blogPosts = [
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredPosts = useMemo(() => {
-    return blogPosts.filter((post) =>
-      post.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }, [searchTerm]);
+  const filteredPosts = useMemo(
+    () => blogPosts.filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase())),
+    [searchTerm]
+  );
 
   return (
     <div className="blog-container">

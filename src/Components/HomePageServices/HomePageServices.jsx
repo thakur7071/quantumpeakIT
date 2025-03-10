@@ -6,37 +6,34 @@ const services = [
   {
     icon: <Briefcase size={40} />,
     title: "IT Strategy & Consulting",
-    description: "Guiding businesses towards smarter technology decisions."
+    description: "Guiding businesses towards smarter technology decisions.",
   },
   {
     icon: <Cloud size={40} />,
     title: "Cloud Solutions",
-    description: "Scalable and cost-efficient cloud services for seamless business operations."
+    description: "Scalable and cost-efficient cloud services for seamless business operations.",
   },
   {
     icon: <Shield size={40} />,
     title: "Cybersecurity",
-    description: "Protecting your assets with advanced security measures."
+    description: "Protecting your assets with advanced security measures.",
   },
   {
     icon: <Code size={40} />,
     title: "Software Development",
-    description: "Custom software solutions tailored to your business requirements."
-  }
+    description: "Custom software solutions tailored to your business requirements.",
+  },
 ];
 
-const HomePageService = () => {
-  const handleNavigation = () => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 100); // Adds a slight delay for a better UX
-  };
+const HomePageServices = () => {
+  const handleNavigation = () =>
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
 
   return (
     <section className="homepage-service-section">
       <div className="homepage-service-container">
         <h2 className="homepage-service-title">Our Services</h2>
-        
+
         <div className="homepage-service-grid">
           {services.map((service, index) => (
             <div key={index} className="homepage-service-card">
@@ -47,7 +44,6 @@ const HomePageService = () => {
           ))}
         </div>
 
-        {/* "More Services" Button with Smooth Scroll */}
         <div className="homepage-service-button">
           <Link to="/services" className="know-more-btn" onClick={handleNavigation}>
             More Services
@@ -58,4 +54,4 @@ const HomePageService = () => {
   );
 };
 
-export default HomePageService;
+export default HomePageServices;

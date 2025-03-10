@@ -1,9 +1,8 @@
-
 import "./CaseStudies.css";
 
 const caseStudies = [
   {
-    title: "Modernizing IT ",
+    title: "Modernizing IT",
     client: "XYZ Corp",
     overview: "XYZ Corp is a multinational company specializing in finance and technology.",
     challenge:
@@ -13,10 +12,10 @@ const caseStudies = [
     results:
       "Post-implementation, XYZ Corp saw a 40% reduction in IT-related downtime and a 20% increase in operational efficiency.",
     testimonial:
-      "Thanks to our collaboration with [Your Company Name], we’ve seen tremendous growth .",
+      "Thanks to our collaboration with [Your Company Name], we’ve seen tremendous growth.",
   },
   {
-    title: "Cybersecurity ",
+    title: "Cybersecurity",
     client: "ABC Ltd",
     overview: "ABC Ltd is a leading e-commerce company facing security threats.",
     challenge:
@@ -63,8 +62,6 @@ const CaseStudies = () => {
       <div className="case-studies-grid">
         {caseStudies.map((study, index) => (
           <div key={index} className="case-study-card animated-card">
-         
-              
             <h3 className="case-study-title">{study.title}</h3>
             <p><strong>Client:</strong> {study.client}</p>
             <p><strong>Client Overview:</strong> {study.overview}</p>
@@ -74,7 +71,7 @@ const CaseStudies = () => {
             <blockquote className="case-study-testimonial">
               {study.testimonial}
             </blockquote>
-            <button className="case-study-button" style={{background:"#191b3d"}} >
+            <button className="case-study-button" style={{ background: "#191b3d" }}>
               Request a Consultation
             </button>
           </div>

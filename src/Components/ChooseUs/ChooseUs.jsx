@@ -1,4 +1,3 @@
-import React from "react";
 import "./ChooseUs.css";
 import { CheckCircle } from "lucide-react";
 
@@ -16,7 +15,6 @@ const ChooseUs = () => {
       title: "Client-Centric Approach",
       description: "We prioritize your success with personalized services.",
     },
-   
   ];
 
   return (

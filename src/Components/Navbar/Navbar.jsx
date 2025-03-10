@@ -22,7 +22,6 @@ const Navbar = () => {
   useEffect(() => {
     if (isMenuOpen) {
       gsap.to(menuRef.current, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" });
-
       gsap.fromTo(
         linkRefs.current,
         { opacity: 0, x: 50 },
@@ -33,19 +32,15 @@ const Navbar = () => {
     }
   }, [isMenuOpen]);
 
-  // Close menu on window resize if screen width is greater than 768px
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setIsMenuOpen(false);
-      }
+      if (window.innerWidth > 768) setIsMenuOpen(false);
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Smooth scroll to the top when clicking the logo
   const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -56,24 +51,21 @@ const Navbar = () => {
         <img src={img} alt="Logo" className="logo" />
       </Link>
 
-      {/* Desktop Links */}
       <div className="nav-links">
-        {navLinks.map((link, index) => (
-          <Link key={index} to={link.path} className={link.isButton ? "contact-btn" : ""}>
-            {link.name}
+        {navLinks.map(({ name, path, isButton }, index) => (
+          <Link key={index} to={path} className={isButton ? "contact-btn" : ""}>
+            {name}
           </Link>
         ))}
       </div>
 
-      {/* Mobile Menu Icon */}
       <i className="ri-menu-3-line mobile-menu" onClick={() => setIsMenuOpen(true)}></i>
 
-      {/* Mobile Menu */}
       <div ref={menuRef} className="full" style={{ transform: "translateX(100%)", opacity: 0 }}>
-        {navLinks.map((link, index) => (
+        {navLinks.map(({ name, path, isButton }, index) => (
           <h4 key={index} ref={(el) => (linkRefs.current[index] = el)}>
-            <Link to={link.path} onClick={() => setIsMenuOpen(false)} className={link.isButton ? "contact-btn" : ""}>
-              {link.name}
+            <Link to={path} onClick={() => setIsMenuOpen(false)} className={isButton ? "contact-btn" : ""}>
+              {name}
             </Link>
           </h4>
         ))}

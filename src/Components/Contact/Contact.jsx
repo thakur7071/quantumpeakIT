@@ -47,9 +47,7 @@ const Contact = () => {
           <div className="select-group">
             <Briefcase size={18} className="input-icon" />
             <select required defaultValue="">
-              <option value="" disabled>
-                Select a Service
-              </option>
+              <option value="" disabled>Select a Service</option>
               <option value="web-development">Web Development</option>
               <option value="seo">SEO Optimization</option>
               <option value="graphic-design">Graphic Design</option>
@@ -62,6 +60,7 @@ const Contact = () => {
             <MessageSquare size={18} className="textarea-icon" />
             <textarea rows={6} placeholder="Your Message" required></textarea>
           </div>
+
           <button type="submit">Send Message</button>
         </form>
       </div>
@@ -70,30 +69,16 @@ const Contact = () => {
       <div className="contact-details">
         <div className="contact-card">
           <h2>Get in Touch</h2>
-          <p>
-            <Phone size={18} /> (+91) 8114227222
-          </p>
-          <p>
-            <Mail size={18} /> info@quantumpeakit.com
-          </p>
-          <p>
-            <MapPin size={18} /> Alambagh Lucknow, Uttar-Pradesh
-          </p>
+          <p><Phone size={18} /> (+91) 8114227222</p>
+          <p><Mail size={18} /> info@quantumpeakit.com</p>
+          <p><MapPin size={18} /> Alambagh Lucknow, Uttar-Pradesh</p>
         </div>
 
         <div className="contact-card">
-          <h2>
-            <Clock size={20} /> Business Hours
-          </h2>
-          <p>
-            <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM
-          </p>
-          <p>
-            <strong>Saturday:</strong> 10:00 AM - 4:00 PM
-          </p>
-          <p>
-            <strong>Sunday:</strong> Closed
-          </p>
+          <h2><Clock size={20} /> Business Hours</h2>
+          <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+          <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+          <p><strong>Sunday:</strong> Closed</p>
         </div>
       </div>
 
@@ -108,21 +93,11 @@ const Contact = () => {
 
       {/* Social Media Links */}
       <div className="social-links">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <Linkedin size={24} />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <Twitter size={24} />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <Facebook size={24} />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <Instagram size={24} />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <Youtube size={24} />
-        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><Linkedin size={24} /></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><Twitter size={24} /></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><Facebook size={24} /></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><Instagram size={24} /></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><Youtube size={24} /></a>
       </div>
     </div>
   );
